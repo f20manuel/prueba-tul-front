@@ -11,7 +11,7 @@ import {useRouter} from "next/router";
 
 export default function HeaderComponent({ title }) {
   const router = useRouter();
-  
+
   const [cart, setCart] = React.useState([]);
   const getCart = React.useCallback(() => {
     Axios.get(api("cart")).then(({ data }) => {
